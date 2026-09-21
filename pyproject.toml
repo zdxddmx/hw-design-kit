@@ -1,0 +1,25 @@
+﻿[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hwdk"
+version = "1.0.0"
+description = "嵌入式硬件设计与验证工具集：设计计算 / 设计评审 / BOM 校验 / 测试方案与报告"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "meminehobe24435-cmyk" }]
+keywords = ["hardware", "embedded", "pcb", "bom", "design-review", "erc", "dfm"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Engineering :: Electronic Design Automation (EDA)",
+]
+dependencies = []
+
+[project.scripts]
+hwdk = "hwdk.cli:main"
+
+[tool.setuptools]
+packages = ["hwdk"]

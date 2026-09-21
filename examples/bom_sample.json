@@ -1,0 +1,74 @@
+{
+  "name": "示例：STM32F407 数据采集主控板 BOM",
+  "description": "用于演示 BOM 校验规则；位号/器件为示例值，非真实量产清单。",
+  "items": [
+    {"ref": "U1", "value": "STM32F407VET6", "package": "LQFP100", "qty": 1,
+     "category": "ic", "manufacturer": "ST", "part_number": "STM32F407VET6",
+     "alternatives": ["GD32F407VET6"], "note": "主控 MCU，168 MHz"},
+
+    {"ref": "U2", "value": "INA333", "package": "VSSOP-8", "qty": 1,
+     "category": "ic", "manufacturer": "TI", "part_number": "INA333AIDGKR",
+     "alternatives": ["AD8237"], "note": "仪表放大器，增益 201（Rg=249Ω）"},
+
+    {"ref": "U3", "value": "AMS1117-3.3", "package": "SOT-223", "qty": 1,
+     "category": "ic", "manufacturer": "AMS", "part_number": "AMS1117-3.3",
+     "note": "LDO 3.3V/1A，注意压差与结温"},
+
+    {"ref": "U4", "value": "TJA1050", "package": "SOP-8", "qty": 1,
+     "category": "ic", "manufacturer": "NXP", "part_number": "TJA1050T",
+     "alternatives": ["SN65HVD230"], "note": "CAN 收发器，500 kbit/s"},
+
+    {"ref": "R1,R2", "value": "249R", "package": "0603", "qty": 2,
+     "category": "resistor", "note": "tolerance 0.1% power 0.1W，INA333 增益电阻"},
+
+    {"ref": "R3,R4", "value": "4.7k", "package": "0603", "qty": 2,
+     "category": "resistor", "note": "tolerance 1% power 0.1W，I2C 上拉"},
+
+    {"ref": "R5", "value": "120R", "package": "0603", "qty": 2,
+     "category": "resistor", "note": "tolerance 1% power 0.1W，CAN 终端电阻"},
+
+    {"ref": "C1,C2,C3,C4", "value": "100nF", "package": "0603", "qty": 4,
+     "category": "capacitor", "note": "tolerance 10% voltage 50V，就近去耦"},
+
+    {"ref": "C5", "value": "10uF", "package": "0805", "qty": 1,
+     "category": "capacitor", "note": "tolerance 20% voltage 16V，体电容"},
+
+    {"ref": "C6", "value": "1nF", "package": "0603", "qty": 1,
+     "category": "capacitor", "note": "tolerance 5% voltage 50V，抗混叠滤波 fc=1.6kHz"},
+
+    {"ref": "C7", "value": "470uF", "package": "SMD-8x10", "qty": 1,
+     "category": "capacitor", "note": "tolerance 20% voltage 25V，输出储能"},
+
+    {"ref": "L1", "value": "100uH", "package": "CD54", "qty": 1,
+     "category": "inductor", "note": "current 1.5A，DC-DC 储能电感"},
+
+    {"ref": "Y1", "value": "8MHz", "package": "HC-49SMD", "qty": 1,
+     "category": "crystal", "note": "HSE 晶振，负载电容 20pF"},
+
+    {"ref": "J1", "value": "TYPE-C-16P", "package": "TYPE-C-16P", "qty": 1,
+     "category": "connector", "manufacturer": "Generic",
+     "part_number": "TYPE-C-16P", "alternatives": ["TYPE-C-16P-SMD"],
+     "note": "USB 接口，差分 90Ω"},
+
+    {"ref": "J2", "value": "XH2.54-4P", "package": "XH2.54", "qty": 2,
+     "category": "connector", "note": "传感器与电机接口"},
+
+    {"ref": "D1", "value": "SS34", "package": "SMA", "qty": 1,
+     "category": "diode", "note": "输入反接保护"},
+
+    {"ref": "D2", "value": "SMBJ24A", "package": "SMB", "qty": 1,
+     "category": "diode", "note": "输入浪涌抑制 TVS"},
+
+    {"ref": "Q1", "value": "AO3400", "package": "SOT-23", "qty": 1,
+     "category": "mosfet", "note": "负载开关"},
+
+    {"ref": "SW1", "value": "RESET", "package": "SMD-3x4", "qty": 1,
+     "category": "switch", "note": "复位按键"},
+
+    {"ref": "LED1,LED2", "value": "GREEN", "package": "0603", "qty": 2,
+     "category": "led", "note": "电源指示与状态指示"},
+
+    {"ref": "TP1,TP2,TP3,TP4", "value": "TESTPOINT", "package": "TP-1.0", "qty": 4,
+     "category": "testpoint", "note": "5V / 3V3 / GND / CAN_H 测试点"}
+  ]
+}
